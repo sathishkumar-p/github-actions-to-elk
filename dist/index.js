@@ -166,7 +166,7 @@ function sendMessagesToElastic(client, messages, elasticIndex) {
 exports.sendMessagesToElastic = sendMessagesToElastic;
 function createAxiosGithubInstance(token) {
     return axios_1.default.create({
-        baseURL: 'https://api.github.com',
+        baseURL: 'https://git.i.mercedes-benz.com/api/v3',
         timeout: 1000,
         headers: { Authorization: `token ${token}` }
     });
@@ -952,7 +952,7 @@ var MediaTypes;
 })(MediaTypes = exports.MediaTypes || (exports.MediaTypes = {}));
 /**
  * Returns the proxy URL, depending upon the supplied url and proxy environment variables.
- * @param serverUrl  The server URL where the request will be sent. For example, https://api.github.com
+ * @param serverUrl  The server URL where the request will be sent. For example, https://git.i.mercedes-benz.com/api/v3
  */
 function getProxyUrl(serverUrl) {
     let proxyUrl = pm.getProxyUrl(new URL(serverUrl));
@@ -1258,7 +1258,7 @@ class HttpClient {
     /**
      * Gets an http agent. This function is useful when you need an http agent that handles
      * routing through a proxy server - depending upon the url and proxy environment variables.
-     * @param serverUrl  The server URL where the request will be sent. For example, https://api.github.com
+     * @param serverUrl  The server URL where the request will be sent. For example, https://git.i.mercedes-benz.com/api/v3
      */
     getAgent(serverUrl) {
         let parsedUrl = new URL(serverUrl);

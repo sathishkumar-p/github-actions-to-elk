@@ -39,7 +39,7 @@ export async function sendMessagesToElastic(
 
 export function createAxiosGithubInstance(token: string): AxiosInstance {
   return Axios.create({
-    baseURL: 'https://api.github.com',
+    baseURL: 'https://git.i.mercedes-benz.com/api/v3',
     timeout: 1000,
     headers: {Authorization: `token ${token}`}
   })
